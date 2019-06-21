@@ -1,16 +1,16 @@
 # facebook-links-scraper
-scrape any music streaming platform(youtube, soundcloud, mixcloud, ..) links from a facebook group into a json
+Scrapes any music streaming platform (YouTube, SoundCloud, Mixcloud, etc.) URLs from a Facebook group into a JSON.
 ## For every post you will get:
 - ID
 - User
-  - user name
-  - user facebook link
-  - group badge, if any
+  - Name
+  - Profile URL
+  - Group badge, if any
 - Track
-  - track id
-  - track url
-  - artwork, if the preview provides any
+  - Track ID
+  - Track URL
+  - Artwork, if the preview provides any
 - Date
 - Reactions
 
-all wrapped up in a compact json exported in `data.json`
+All wrapped up in a compact JSON exported in `data.json`
