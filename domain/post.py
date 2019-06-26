@@ -1,18 +1,18 @@
-from domain.user import User
 from domain.track import Track
+from domain.user import User
 
 
 class Post:
-    def __init__(self, _user: "User", _track: "Track", _date, _reactions, _id=None):
-        self.id = _id
-        self.username = _user.get_username()
-        self.user_link = _user.get_user_link()
-        self.badge = _user.get_badge()
-        self.track_id = _track.get_track_id()
-        self.artwork = _track.get_artwork()
-        self.url = _track.get_url()
-        self.date = _date
-        self.reactions = _reactions
+    def __init__(self, user: "User", track: "Track", date, reactions, post_id=None):
+        self.id = post_id
+        self.username = user.username
+        self.user_link = user.user_link
+        self.badge = user.badge
+        self.track_id = track.track_id
+        self.artwork = track.artwork
+        self.url = track.url
+        self.date = date
+        self.reactions = reactions
 
     def __str__(self):
-        return "{} - {} - {}".format(self.username, self.track_id, self.date)
+        return f'{self.username} - {self.track_id} - {self.date}'
