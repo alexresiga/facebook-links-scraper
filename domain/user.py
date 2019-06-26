@@ -1,26 +1,32 @@
 class User:
-    def __init__(self, _user_link, _username, _badge=None):
-        self.__username = _username
-        self.__user_link = _user_link
-        self.__badge = _badge
+    def __init__(self, user_link, username, badge=None):
+        self.__username = username
+        self.__user_link = user_link
+        self.__badge = badge
 
-    def set_user_link(self, ul):
-        self.__user_link = ul
-
-    def get_user_link(self):
-        return self.__user_link
-
-    def get_username(self):
+    @property
+    def username(self):
         return self.__username
 
-    def set_username(self, u):
-        self.__username = u
+    @username.setter
+    def username(self, value):
+        self.__username = value
 
-    def get_badge(self):
+    @property
+    def user_link(self):
+        return self.__user_link
+
+    @user_link.setter
+    def user_link(self, value):
+        self.__user_link = value
+
+    @property
+    def badge(self):
         return self.__badge
 
-    def set_badge(self, b):
-        self.__badge = b
+    @badge.setter
+    def badge(self, value):
+        self.__badge = value
 
     def __str__(self):
-        return "{} -- {}\nbadge: {}\nposted:\n".format(self.get_username(), self.get_user_link(), self.get_badge())
+        return f'{self.username} -- {self.user_link}\nbadge: {self.badge}\nposted:\n'
